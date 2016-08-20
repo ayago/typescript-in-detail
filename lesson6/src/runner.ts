@@ -2,11 +2,12 @@ import {Bootstrap} from "./bootstrap"
 
 document.onreadystatechange = function(){
     if(document.readyState === "complete"){
-        new Bootstrap(document)
+        new Bootstrap(window)
             .initializeInterfacePanel({
                 invokeBtnId: 'invokeButton',
                 selectShapeBtn: 'shapeImpl',
-                canvasId: 'shapeCanvasArea'
+                canvasId: 'shapeCanvasArea',
+                messagePanelId: 'invokersMessage'
             })
     }
 }

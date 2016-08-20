@@ -1,4 +1,4 @@
 export interface Shape {
     getName?: () => string;
-    draw2D: (canvas: HTMLCanvasElement) => void;
+    draw2D: (context: CanvasRenderingContext2D) => void;
 }

@@ -9,7 +9,6 @@
                 margin: auto;
                 max-width: 1000px;
                 max-height: 500px;
-                min-height: 250px;
             }
 
             div.panel_title {
@@ -21,8 +20,9 @@
 
             div.panel_body {
                 height: 90%;
+                width: 100%;
                 max-height: 450px;
-                min-height: 225px; 
+                position: relative;
             }
 
             div.half_panel {
@@ -62,15 +62,21 @@
                         <option>Circle</option>
                         <option>Rectangle</option>
                         <option>Triangle</option>
+                        <option>IrregularShape</option>
                     </select>
                 </div>
-                <div class="half_panel right bordered">
+                <div class="panel half_panel right bordered">
                     <div class="panel_title">
                         <label>I don't know man I'll just invoke Shape.draw():</label>
                         <button id="invokeButton">Draw shape</button>
                     </div>
-                    <div class="panel_body centered">
-                        <canvas id="shapeCanvasArea"></canvas>
+                    <div class="panel_body">
+                        <div class="panel_body centered">
+                            <canvas id="shapeCanvasArea"></canvas>
+                        </div>
+                        <div class="panel_title centered">
+                            <span id="invokersMessage"></span>
+                        </div>
                     </div>
                 </div>
             </div>
