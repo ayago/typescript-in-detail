@@ -143,6 +143,7 @@ At its basic form, the *Interface and Polymorphsim in Typescript* is coded as fo
             let returnValue: Shape;
             switch (name){
                 case 'Circle': returnValue = new Circle(); break;
+                //other case handlers for Triangle, Rectangle, and Irregular shape
             }
             return returnValue;
         }
@@ -159,6 +160,6 @@ At its basic form, the *Interface and Polymorphsim in Typescript* is coded as fo
     })
 
     //invokeButton is the id of select/drop down form
-    dom.getElementId('invokeButton').addEventListener('click',(selected) => {
+    dom.getElementId('invokeButton').addEventListener('click',() => {
         shape.draw(canvas.getContext('2d'))
     })
